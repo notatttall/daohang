@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<configuration>
+	<basemap name="地图" type="dynamic" visible="true" alpha="1"
+          url="http://192.168.23.1:6080/arcgis/rest/services/ChinaWM/MapServer"/>
+<!--     <basemap name="地图" type="tiled" visible="true" alpha="1" -->
+<!--           url="http://localhost:6080/arcgis/rest/services/China/MapServer"/> -->
+    <overviewservice type="tiled" url="http://192.168.23.1:6080/arcgis/rest/services/ChinaWM/MapServer"/>
+    <geometryservice url="http://192.168.23.1:6080/arcgis/rest/services/Utilities/Geometry/GeometryServer"/>
+</configuration>

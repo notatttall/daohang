@@ -1,0 +1,230 @@
+body{
+    margin:0 ;
+	padding:0 ;
+
+	min-width:1002px;
+	height:100%;
+	overflow:hidden;
+	font:12px/1.5 '\5fae\8f6f\96c5\9ed1','\5b8b\4f53';
+	
+}
+
+ul{
+	list-style: none outside none; 
+
+}
+
+input{
+	font: 14px/1.4 Helvetica,arial,freesans,clean,sans-serif;
+	
+}
+
+a:hover{
+	cursor: pointer;
+}
+
+.font12{
+	font-size:12px;
+}
+
+.font14{
+	font-size:14px;
+}
+
+.main{
+	min-width:1002px;
+}
+
+.main .top{
+	height:506px;
+	border-bottom:5px solid #7390ba;
+	vertical-align: bottom;
+	position:relative;
+	background:#6e96cf;
+}
+
+
+
+.main .top-img{
+	margin:0 auto;
+	width: 1000px;
+	height: 506px;
+	background: url("../images/background.jpg") no-repeat;
+	vertical-align: bottom;
+	position:absolute;
+	bottom:0px;
+	left:100px;
+}
+
+
+
+.main .login{
+	float:left;
+	height:200px;
+	width:100%;
+	*margin-top:15px;
+}
+
+.login .login-main{
+	width:375px;
+	height:200px;
+	margin:0px auto;
+/* 	padding-top:15px; */
+}
+
+.textfeild{
+	margin:0px;
+	vertical-align: middle;
+	outline: medium none;
+	border: 1px solid rgb(204, 204, 204);
+	width: 170px;
+	padding: 5px;
+	font-size: 16px;
+	border-radius: 5px 5px 5px 5px;
+	color: #666666;
+	background-repeat: no-repeat;
+	background-position: right center;
+	transition: all 0.15s ease-in 0s;
+
+}
+
+.login-form{
+	height:30px;
+	margin:10px 0px;
+	clear: both;
+}
+
+.login-err{
+	height:20px;
+	margin:5px 0 -5px 0;
+	text-align:center;
+	color:#8f8f8f;
+	clear: both;
+}
+
+.login-form .title{
+	float:left;
+	width:60px;
+	line-height:30px;
+	color:#8f8f8f;
+}
+
+.login-form .title span{
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+/* 	font-weight:bold; */
+}
+
+.login-form .title .pwd{
+letter-spacing: 0.5em;
+}
+
+
+.login-form .title .pwd{
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+/* 	font-weight:bold; */
+}
+
+.login-form .dd-radio{
+	float:left;
+	width:150px;
+	padding-left:50px;
+    position:relative;
+/*     bottom:4px; */
+	color:#8f8f8f;
+	height:30px;
+	line-height:30px;
+}
+
+.login-form .dd-reset{
+
+/*     bottom:4px; */
+
+	height:30px;
+	line-height:30px;
+}
+
+.login-form a{
+
+	color:#8f8f8f;
+}
+
+.botton-form{
+	height:50px;
+	position: relative;
+	bottom: 20px;
+	left:20px;
+	padding-top:15px;
+}
+
+.login-form .user-name{
+	background:url("imgs/icon1.png") no-repeat 180px;
+	background-color:#fff;
+	padding-right:35px;
+}
+.login-form .password{
+	background:url("imgs/icon2.png") no-repeat 180px;
+	background-color:#fff;
+	padding-right:35px;
+}
+
+
+.botton-form .button{
+	font: 14px/1.4 Helvetica,arial,freesans,clean,sans-serif;
+	width:235px;
+	height:38px;
+	background: #637cad;
+	border-width: 0px;
+	border-style: solid;
+	font-weight: bold;
+	outline: medium none;
+	color:#ffffff;
+/* 	vertical-align: middle; */
+	cursor: pointer;
+	border-radius: 5px 5px 5px 5px;
+	letter-spacing: 10px
+}
+
+.logo
+{
+	position: relative;
+	width:80px;
+	height:30px;	
+	background:url("imgs/logo.png") no-repeat center;
+}
+
+
+.bottom-banner{
+	float:left;
+	width:100%;
+	height:50px;
+	position:relative;
+	bottom:-15px;
+	*bottom:0px;
+}
+
+
+.bottom-banner .banner{
+	margin:0 auto;
+	width:460px;
+}
+
+.bottom-banner .banner ul li{
+	float:left;
+	height:30px;
+	line-height:30px;
+}
+
+.bottom-banner span{
+	float:left;
+/* 	position:relative; */
+/* 	bottom:5px; */
+}
+
+.bottom-banner a{
+/* 	position:relative; */
+/* 	bottom:4px; */
+}

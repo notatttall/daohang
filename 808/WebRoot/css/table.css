@@ -1,0 +1,28 @@
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+ }
+ th, td
+ {
+    border: 1px solid #b5d6e6;
+    font-size: 15px;
+    font-family:"微软雅黑,宋体";
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    height: 27.5px;
+    color:rgba(0, 0, 0, 0.6);
+ }
+ th
+ {
+    background-color: rgb(203, 235, 232);
+ }  
+ 
+ .hover
+{
+  background-color: #B0ECE5;
+}

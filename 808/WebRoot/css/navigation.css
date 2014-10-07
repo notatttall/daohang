@@ -1,0 +1,191 @@
+body, h1, h2, h3, p, quote, small, form, input, ul, li, ol, label
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    color: #cccccc;
+    font-size: 13px;
+    background: #302b23;
+    font-family:"微软雅黑,宋体";
+  /*  font-family: Arial, Helvetica, sans-serif;*/
+}
+
+ul
+{
+    width:200px;
+    margin: 0;
+    padding: 0;
+}
+
+ul.container
+{
+    width: 240px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+li
+{
+    list-style: none;
+    text-align: left;
+}
+
+li.menu
+{
+    padding: 5px 0;
+    width: 100%;
+}
+
+li.button a
+{
+    display: block;
+    font-family: BPreplay,Arial,Helvetica,sans-serif;
+    font-size: 21px;
+    height: 34px;
+    overflow: hidden;
+    padding: 10px 0 0 5%;
+    position: relative;
+    width: 95%;
+    background:#78BD38;
+}
+
+li.button a:hover
+{
+    text-decoration: none;
+}
+
+li.button a span
+{
+    height: 44px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    display: block;
+}
+
+
+li.button a.blue
+{
+    color: #074384;
+}
+li.button a.blue span
+{
+}
+
+li.button a.green
+{
+    color: #436800;
+}
+li.button a.green span
+{
+}
+
+li.button a.orange
+{
+    color: #882e02;
+}
+li.button a.orange span
+{
+
+}
+
+
+
+li.button a:hover
+{
+    background-position: bottom left;
+}
+li.button a:hover span
+{
+    background-position: bottom right;
+}
+
+.dropdown
+{
+    display: none;
+}
+
+.dropdown li
+{
+   
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(253, 252, 248, 0);
+    color: #6677BD;
+    margin: 5px 26px 5px 10px;
+    padding: 4px 0 4px 18px;
+}
+
+
+h1
+{
+    font-family: "Myriad Pro" ,Arial,Helvetica,sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+h2
+{
+    font-family: "Myriad Pro" ,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    padding-right: 140px;
+    right: 0;
+    text-align: right;
+    text-transform: uppercase;
+    top: 15px;
+}
+
+.clear
+{
+    clear: both;
+}
+
+#main
+{
+    margin: 15px auto;
+    text-align: center;
+    width: 203px;
+    position: relative;
+}
+
+a, a:visited
+{
+    color: #0196e3;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+p
+{
+    padding: 10px;
+    text-align: center;
+}
+
+
+#li2
+{
+  font-size:17;
+}
+
+.active{background-color:#1EBE10!important}
+
+#Header
+{
+  color: #FCFCFC;
+    font-size: 38px;
+    font-weight: bolder;
+}
+#Footer{
+	padding-left: 45%;
+	padding-top: 23px;
+}
