@@ -37,7 +37,7 @@ public class CarServlet extends HttpServlet {
 	private MultiThreadServer mtd = null;
 
 	/**
-	 * 序列号
+	 * 
 	 */
 	private static final long serialVersionUID = 5507433468512032321L;
 
@@ -88,7 +88,6 @@ public class CarServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		//第一次访问时，启动socket端口
 		if(flag){
 			flag = false;
 			try {
