@@ -1,6 +1,6 @@
 
 //lineArr轨迹数组   marker2轨迹车辆  polyline轨迹
-var mapObj,toolBar,inforWindow,lineArr,marker2,polyline,pathId;
+var mapObj,toolBar,inforWindow,lineArr,marker2,polyline;
 //起、终点
 var start_xy = new AMap.LngLat(126.538103,45.856);
 var end_xy = new AMap.LngLat(126.548803,45.825);
@@ -45,7 +45,7 @@ function mapInit(){
 	});
 	
 	//绘制轨迹
-	//AMap.event.addListener(mapObj,"complete",completeEventHandler); 
+	AMap.event.addListener(mapObj,"complete",completeEventHandler); 
 	
 }
 
@@ -55,7 +55,7 @@ function completeEventHandler(){
 	lineArr = new Array(); 
 	var startLocation;  //车辆起始位置
 	var carId = "黑D22222";
-	//var pathId = "001";
+	var pathId = "2014100701";
 	 $.ajax({ 
      	type:"POST", //请求方式 
    	 	url:"servlet/CarServlet", //请求路径 
@@ -92,11 +92,10 @@ function completeEventHandler(){
 		strokeWeight:3,//线宽
 		strokeStyle:"solid"//线样式
 	});
-	//mapObj.setFitView();
+	mapObj.setFitView();
   }
 //开始播放轨迹
-function startAnimation() {
-	completeEventHandler();
+function startAnimation() { 
 	polyline.show();
 	marker2.show();
 	marker2.moveAlong(lineArr,500);

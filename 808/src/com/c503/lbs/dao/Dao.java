@@ -50,13 +50,6 @@ public class Dao {
 	   return dao;
 	}
 
-	public Connection getConn() {
-		return conn;
-	}
-	public PreparedStatement getStatement() {
-		return statement;
-	}
-	
 	// 关闭数据库
 	public void deconnSQL() {
 		try {
@@ -179,16 +172,13 @@ public class Dao {
 			while (rs.next()) {
 				Location location = new Location();
 				//修正经纬度
-				if("2014100701".equals(pathId)){
-					LatLng ll = new LatLng(Double.parseDouble(rs.getString(11)), Double.parseDouble(rs.getString(10)));
-		      		ll = CoordinateUtil.transformFromWGSToGCJ(ll);
-		      		location.setLatitude(ll.latitude);
-					location.setLongitude(ll.longitude);
-				}else{
-					location.setLatitude(Double.parseDouble(rs.getString(11)));
-					location.setLongitude(Double.parseDouble(rs.getString(10)));
-				}
+				LatLng ll = new LatLng(Double.parseDouble(rs.getString(11)), Double.parseDouble(rs.getString(10)));
+	      		ll = CoordinateUtil.transformFromWGSToGCJ(ll);
+	      		location.setLatitude(ll.latitude);
+				location.setLongitude(ll.longitude);
 				
+				/*location.setLatitude(Double.parseDouble(rs.getString(11)));
+				location.setLongitude(Double.parseDouble(rs.getString(10)));*/
 				locations.add(location);
 			}
 		} catch (SQLException e) {

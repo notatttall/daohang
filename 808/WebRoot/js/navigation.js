@@ -24,25 +24,13 @@ $(document).ready(function () {
  	});
      
      //轨迹回放
-   /*  $('#path1').click(function(){
+     $('#path').click(function(){
     	 if($(this).hasClass('active')){
  			$(this).removeClass('active');	
  			stopAnimation();
  		}else{
  			$(this).addClass('active');
- 			pathId = "2014100701";
- 			startAnimation(pathId);
- 		}
-	});*/
-   //轨迹回放
-     $('#path2').click(function(){
-    	 if($(this).hasClass('active')){
- 			$(this).removeClass('active');	
- 			stopAnimation();
- 		}else{
- 			$(this).addClass('active');
- 			pathId = "001";
- 			startAnimation(pathId);
+ 			startAnimation();
  		}
 	});
 

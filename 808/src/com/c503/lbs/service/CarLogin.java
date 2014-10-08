@@ -1,6 +1,5 @@
 package com.c503.lbs.service;
 
-import com.c503.lbs.entity.Task;
 import com.c503.lbs.rest.model.RTLocation;
 import com.c503.lbs.rest.model.RestCar;
 
@@ -29,12 +28,6 @@ public class CarLogin {
 		car3.setLatitude("45.20349391402901");
 		car3.setLongitude("126.54235576275106");
 		login(car3);
-		
-		Task task = new Task();
-		task.setTaskId("0088");
-		task.setDescribe("001");
-		task.setStatus("0");
-		RTLocation.carTask.put("黑D22222", task);
 			
 	}
 }
