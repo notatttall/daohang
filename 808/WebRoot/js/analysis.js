@@ -27,11 +27,17 @@ $(document).ready(function () {
 	$(".tab-nav").tab();
 	
 	$('.caidan_top li').click(function(){
-		$('.caidan_top li').removeClass('active');	
-		$(this).addClass('active');
+		$('.caidan_top li').removeClass('head_active');	
+		$(this).addClass('head_active');
 	});
 	$("#logout").click(function(){
 		window.location.href = "http://localhost:8083/808/login.html";
 	}); 
-	
+	$("#jk").click(function(){
+		window.location.href = "http://localhost:8083/808/test.html";
+	}); 
+	$("#yy").click(function(){
+		window.location.href = "http://localhost:8083/808/analysis.html";
+	}); 
+		
 });

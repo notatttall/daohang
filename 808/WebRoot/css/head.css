@@ -11,8 +11,8 @@
 }
 #logo{
     padding-left: 50px;
-    padding-top: 10px;
-    /* padding-bottom:50px; */
+    padding-top: 27px;
+    padding-bottom: 10px;
     float: left;
 }
 .caidan{
@@ -51,7 +51,7 @@ ul.menu_top li {
 }
 .head_font span{
 	float: left;
-	margin: -2px 5px 6px -3px;
+	margin: 3px 1px 6px -3px;
 }
 .caidan li img{
 	margin: 0px 9px 0px -16px;
@@ -60,4 +60,10 @@ ul.menu_top li {
 
 .caidan_top li{
 	cursor:pointer;
+}
+.caidan ul{
+width:240px;
+}
+.head_active{
+	color:#0A00FF;
 }

@@ -3,6 +3,21 @@ var i = 100;
 var interval ;
 $(document).ready(function () {
 	
+	$('.caidan_top li').click(function(){
+		$('.caidan_top li').removeClass('head_active');	
+		$(this).addClass('head_active');
+	});
+	$("#logout").click(function(){
+		window.location.href = "http://localhost:8083/808/login.html";
+	}); 
+	$("#yy").click(function(){
+		window.location.href = "http://localhost:8083/808/analysis.html";
+	}); 
+	$("#jk").click(function(){
+		window.location.href = "http://localhost:8083/808/test.html";
+	}); 
+	
+	
 	 $('li.button a').click(function (e) {
         var dropDown = $(this).parent().next();
         $('.dropdown').not(dropDown).slideUp('slow');

@@ -1,4 +1,16 @@
 $(document).ready(function () {
+	
+	$("#logout").click(function(){
+		window.location.href = "http://localhost:8083/808/login.html";
+	}); 
+	$("#jk").click(function(){
+		window.location.href = "http://localhost:8083/808/test.html";
+	}); 
+	$("#yy").click(function(){
+		window.location.href = "http://localhost:8083/808/analysis.html";
+	}); 
+	
+	
 	//findTaskByCarId("黑D22222");
 	//findTaskByStatus("0");
 	
