@@ -1,0 +1,63 @@
+
+
+
+#header{
+    height:80px;
+    background: #2DA1EE;
+    color: #FCFCFC;
+    font-size: 38px;
+    font-weight: bolder;
+    font-family:微软雅黑;
+}
+#logo{
+    padding-left: 50px;
+    padding-top: 10px;
+    /* padding-bottom:50px; */
+    float: left;
+}
+.caidan{
+	height: 63px;
+	float: right;
+	padding-right: 50px;
+	position: relative;
+}
+.caidan_top{
+	
+}
+.caidan_top td{
+	text-align: center;
+}
+
+ul.menu_top li {
+	float: left;
+	text-align: center;
+	margin: 0 3px;
+	position: relative;
+}
+
+
+/*   head  start */
+.head_font{
+	font-size: 13px;
+}
+.caidan li{
+	background-color:#ccccc;
+	text-align:center;
+	float:left;
+	width: 70px;
+	margin: 8px 0;
+	padding: 5px;
+	list-style:none;
+}
+.head_font span{
+	float: left;
+	margin: -2px 5px 6px -3px;
+}
+.caidan li img{
+	margin: 0px 9px 0px -16px;
+}
+/*   head   end */
+
+.caidan_top li{
+	cursor:pointer;
+}

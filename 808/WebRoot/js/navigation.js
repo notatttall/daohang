@@ -2,7 +2,7 @@
 var i = 100;
 var interval ;
 $(document).ready(function () {
-	 
+	
 	 $('li.button a').click(function (e) {
         var dropDown = $(this).parent().next();
         $('.dropdown').not(dropDown).slideUp('slow');
@@ -24,26 +24,34 @@ $(document).ready(function () {
  	});
      
      //轨迹回放
-   /*  $('#path1').click(function(){
-    	 if($(this).hasClass('active')){
- 			$(this).removeClass('active');	
+     $('.path').click(function(){
+    	 if($('.path').hasClass('active')){
+ 			$('.path').removeClass('active');	
  			stopAnimation();
  		}else{
  			$(this).addClass('active');
- 			pathId = "2014100701";
- 			startAnimation(pathId);
- 		}
-	});*/
-   //轨迹回放
-     $('#path2').click(function(){
-    	 if($(this).hasClass('active')){
- 			$(this).removeClass('active');	
- 			stopAnimation();
- 		}else{
- 			$(this).addClass('active');
- 			pathId = "001";
+ 			pathId = $(this).text();
  			startAnimation(pathId);
  		}
 	});
+     
+     //任务管理
+     $('#task').click(function(){
+    	 mapObj.destroy();
+    	 $(".task").css("display","block");
+    	 //$(".modify").css("display","none");
+	});
+   /*  $('.path').click(function(){
+    	 
+    	 $(this).addClass('active');
+		 pathId = $(this).text();
+		 
+    	 if($(this).hasClass('active')){
+ 			$(this).removeClass('active');	
+ 			stopAnimation();
+ 		}else{
+ 			
+ 		}
+	});*/
 
  });

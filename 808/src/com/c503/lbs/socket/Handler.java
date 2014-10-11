@@ -41,22 +41,7 @@ class Handler implements Runnable{
 	                int length = socketIn.read(temp, 0, 1024 * 4);
 	               
 	                while(-1 != length){
-	                	
-	                	//读取任务
-	                	String sTask = new String(temp);
-	                	if( sTask.startsWith("Task") ){
-	              			ObjectInputStream in = new ObjectInputStream(socketIn);
-	              			try {
-	              				Task task = (Task)in.readObject();
-	              				System.out.println("开始解析任务");
-	              				System.out.println("任务状态：" + task.getStatus());
-	              				System.out.println("任务描述：" + task.getDescribe());
-							} catch (ClassNotFoundException e) {
-								e.printStackTrace();
-							}
-	              		}
-	                	
-	                	
+	                
 	                	  FrameBase fBase = FrameFactory.CreatFrame(temp,length);
 	                	 
 	                	  //终端注册
@@ -95,36 +80,14 @@ class Handler implements Runnable{
 	                      //位置信息汇报
 	                      if(fBase.getm_FrameHead().getID() == FrameType.MSG_WZXXHB){
 	    			        	  FrameLocaInfoRep fa = (FrameLocaInfoRep)fBase;
-	    			        	  	
+	    			        	//将数据写入在线车辆容器、数据库。并打印响应信息
 	    			        	saveMessage(pathId, car, fa);
-	    			        	
-	    			        	//写任务
-	    			        	/*if(RTLocation.carTask.containsKey("黑D22222")){
-	                      			ObjectOutputStream out = new ObjectOutputStream(socketOut);
-                      				Task task2 = RTLocation.carTask.get("黑D22222");
-                      				out.writeObject(task2);
-                      				out.flush();
-	                      		}*/
-	    			        	
-	    			        	//写任务
-	    			        	if(RTLocation.carTask.containsKey("黑D22222")){
-	    			        		Task task = RTLocation.carTask.get("黑D22222");
-	    			        		if( "0".equals(task.getStatus())){
-	    			        			ObjectOutputStream out = new ObjectOutputStream(socketOut);
-	    			        			System.out.println("开始发送任务");
-	    			        			System.out.println(task.toString().getBytes());
-	    			        			out.writeObject(task);
-	    			        			out.flush();
-	    			        			RTLocation.carTask.get("黑D22222").setStatus("1");
-	    			        		}
-	    			        	}else{
-	                      			//响应
-	                      			FrameServerAnswer frameServer = new FrameServerAnswer("18734135922",2014,false,false);
-	                      			frameServer.setInfo(333, 1);
-	                      			byte[] bDataServer = frameServer.getM_DataBuf();
-	                      			socketOut.write(bDataServer);
-	                      			socketOut.flush();
-	                      		}
+                      			//响应
+                      			FrameServerAnswer frameServer = new FrameServerAnswer("18734135922",2014,false,false);
+                      			frameServer.setInfo(333, 1);
+                      			byte[] bDataServer = frameServer.getM_DataBuf();
+                      			socketOut.write(bDataServer);
+                      			socketOut.flush();
 		                  		length = -1;
 	    		                  
 	                      }

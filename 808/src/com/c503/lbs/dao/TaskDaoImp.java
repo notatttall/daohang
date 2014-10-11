@@ -48,7 +48,7 @@ public class TaskDaoImp implements ITaskDao {
 		return false;
 	}
 
-	public Task findTask(String id) {
+	public Task findTaskById(String id) {
 		Dao dao = Dao.getInstance();
 		Connection conn = dao.getConn();
 		PreparedStatement statement = dao.getStatement();
@@ -76,7 +76,6 @@ public class TaskDaoImp implements ITaskDao {
 				task.setDescribe(rs.getString(11));
 			}
 		} catch (SQLException e) {
-			System.out.println("据车牌号查找车的详细信息出错。");
 			e.printStackTrace();
 		} catch (Exception e) {
 			System.out.println("显示出错。");
@@ -85,7 +84,7 @@ public class TaskDaoImp implements ITaskDao {
 		return task;
 	}
 
-	public List<Task> findTasks(String status) {
+	public List<Task> findTasksByStatus(String status) {
 
 		Dao dao = Dao.getInstance();
 		Connection conn = dao.getConn();
@@ -117,7 +116,6 @@ public class TaskDaoImp implements ITaskDao {
 				tasks.add(task);
 			}
 		} catch (SQLException e) {
-			System.out.println("据车牌号查找车的详细信息出错。");
 			e.printStackTrace();
 		} catch (Exception e) {
 			System.out.println("显示出错。");
@@ -126,6 +124,86 @@ public class TaskDaoImp implements ITaskDao {
 		return tasks;
 	}
 
+
+	public List<Task> findCarTasksByStatus(String status, String carId) {
+		Dao dao = Dao.getInstance();
+		Connection conn = dao.getConn();
+		PreparedStatement statement = dao.getStatement();
+		
+		String sql =  "select * from task where receiver = ? and status = ? ";
+		ResultSet rs = null;
+		try {
+			statement = conn.prepareStatement(sql);
+			statement.setString(1, carId);
+			statement.setString(2, status);
+			rs = statement.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		List<Task> tasks = new ArrayList<Task>();
+		try {
+			while (rs.next()) {
+				Task task = new Task();
+				task.setTaskId(rs.getString(2));
+				task.setReceiver(rs.getString(3));
+				task.setSender(rs.getString(4));
+				task.setStatus(rs.getString(5));
+				task.setSendTime(rs.getString(6));
+				task.setFinishTime(rs.getString(7));
+				task.setdLongitute(rs.getString(8));
+				task.setdLatitute(rs.getString(9));
+				task.setMethod(rs.getString(10));
+				task.setDescribe(rs.getString(11));
+				tasks.add(task);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("显示出错。");
+			e.printStackTrace();
+		}
+		return tasks;
+	}
+	
+	public List<Task> findTasksByReceiver(String receiver) {
+		Dao dao = Dao.getInstance();
+		Connection conn = dao.getConn();
+		PreparedStatement statement = dao.getStatement();
+		
+		String sql =  "select * from task where receiver = ?";
+		ResultSet rs = null;
+		try {
+			statement = conn.prepareStatement(sql);
+			statement.setString(1, receiver);
+			rs = statement.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		List<Task> tasks = new ArrayList<Task>();
+		try {
+			while (rs.next()) {
+				Task task = new Task();
+				task.setTaskId(rs.getString(2));
+				task.setReceiver(rs.getString(3));
+				task.setSender(rs.getString(4));
+				task.setStatus(rs.getString(5));
+				task.setSendTime(rs.getString(6));
+				task.setFinishTime(rs.getString(7));
+				task.setdLongitute(rs.getString(8));
+				task.setdLatitute(rs.getString(9));
+				task.setMethod(rs.getString(10));
+				task.setDescribe(rs.getString(11));
+				tasks.add(task);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("显示出错。");
+			e.printStackTrace();
+		}
+		return tasks;
+	}
+	
 	public boolean modifyTask(Task task) {
 		Dao dao = Dao.getInstance();
 		Connection conn = dao.getConn();
@@ -145,6 +223,27 @@ public class TaskDaoImp implements ITaskDao {
 			statement.setString(8, task.getMethod());
 			statement.setString(9, task.getDescribe());
 			statement.setString(10, task.getTaskId());
+			statement.executeUpdate();
+			return true;
+		} catch (SQLException e) {
+			System.out.println("插入数据库时出错：");
+			e.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("插入时出错：");
+			e.printStackTrace();
+		}
+		return false;
+	}
+	
+	public boolean modifyTaskStatus(String taskId,String status) {
+		Dao dao = Dao.getInstance();
+		Connection conn = dao.getConn();
+		PreparedStatement statement = dao.getStatement();
+		String sql = "UPDATE task SET status = ? WHERE taskId = ?";
+		try {
+			statement = conn.prepareStatement(sql);
+			statement.setString(1, status);
+			statement.setString(2, taskId);
 			statement.executeUpdate();
 			return true;
 		} catch (SQLException e) {
@@ -195,8 +294,16 @@ public class TaskDaoImp implements ITaskDao {
 		task.setStatus("未完成");
 		new TaskDaoImp().modifyTask(task);*/
 		//Task task = new TaskDaoImp().findTask("0001");
-		List<Task> tasks = new TaskDaoImp().findTasks("未完成");
+		/*List<Task> tasks = new TaskDaoImp().findTasks("未完成");
 		System.out.println(tasks.get(0).getdLatitute());
-		System.out.println(tasks.get(1).getdLatitute());
+		System.out.println(tasks.get(1).getdLatitute());*/
+		
+		List<Task> tasks = new TaskDaoImp().findCarTasksByStatus("1", "黑D22222");
+		System.out.println(tasks.size());
+		System.out.println(tasks.get(0).getdLatitute());
+		
 	}
+
+
+
 }

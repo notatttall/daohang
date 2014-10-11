@@ -18,14 +18,21 @@ public interface ITaskDao {
 	 * @param id  任务号
 	 * @return  任务
 	 */
-	public  Task findTask(String id);
+	public  Task findTaskById(String id);
 
 	/**
 	 * 状态查找任务
 	 * @param status  状态
 	 * @return
 	 */
-	public List<Task> findTasks(String status);
+	public List<Task> findTasksByStatus(String status);
+	
+	/**
+	 * 根据车辆编号查找任务
+	 * @param status  接收者（车辆编号）
+	 * @return
+	 */
+	public List<Task> findTasksByReceiver(String receiver);
 	
 	/**
 	 * 添加任务

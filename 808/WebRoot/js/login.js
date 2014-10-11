@@ -38,11 +38,11 @@ $(function() {
 	document.onkeydown = function(e) {
 		var ev = document.all ? window.event : e;
 		if (ev.keyCode == 13) {
-			window.location.href = "http://localhost:8083/808/test.html";
+			window.location.href = "http://localhost:8083/808/analysis.html";
 		}
 	}
 	$("#btnSubmit").click(function(){
-		window.location.href = "http://localhost:8083/808/test.html";
+		window.location.href = "http://localhost:8083/808/analysis.html";
 	}); 
 
 });

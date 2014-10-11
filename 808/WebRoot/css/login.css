@@ -37,10 +37,10 @@ a:hover{
 
 .main .top{
 	height:506px;
-	border-bottom:5px solid #7390ba;
+	border-bottom: 2px solid rgba(114, 159, 177, 0.19);
 	vertical-align: bottom;
 	position:relative;
-	background:#6e96cf;
+	background: rgba(84, 152, 197, 0.94);
 }
 
 
@@ -176,7 +176,7 @@ letter-spacing: 0.5em;
 	font: 14px/1.4 Helvetica,arial,freesans,clean,sans-serif;
 	width:235px;
 	height:38px;
-	background: #637cad;
+	background: #2DA1EE;
 	border-width: 0px;
 	border-style: solid;
 	font-weight: bold;

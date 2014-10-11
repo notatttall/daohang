@@ -19,7 +19,9 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import com.c503.lbs.dao.Dao;
+import com.c503.lbs.dao.TaskDaoImp;
 import com.c503.lbs.entity.Car;
+import com.c503.lbs.entity.Task;
 import com.c503.lbs.rest.model.CarPath;
 import com.c503.lbs.rest.model.RTLocation;
 import com.c503.lbs.rest.model.RestCar;
@@ -159,6 +161,64 @@ public class CarServlet extends HttpServlet {
 			CarPath  path = dao.findByPathId(carId,pathId);
 			JSONObject jo=JSONObject.fromObject( path );
 			out.print(jo);
+			return;
+		}
+		
+	    //根据车辆编号获取任务列表
+		if(method.equals("getCarTaskBycarId")){
+			String carId= request.getParameter("carId");
+			System.out.println("测试。。。"+carId);
+			List<Task> tasks = new TaskDaoImp().findTasksByReceiver(carId);
+			JSONArray jo=JSONArray.fromObject( tasks );
+			out.print(jo);
+			return;
+		}
+		
+		//根据任务状态获取任务列表
+		if(method.equals("getTaskByStatus")){
+			String status= request.getParameter("status");
+			List<Task> tasks = new TaskDaoImp().findTasksByStatus(status);
+			JSONArray jo=JSONArray.fromObject( tasks );
+			out.print(jo);
+			return;
+		}
+		
+		//根据车辆编号和任务状态获取任务列表
+		if(method.equals("getCarTaskByStatus")){
+			String status= request.getParameter("status");
+			String carId= request.getParameter("carId");
+			List<Task> tasks = new TaskDaoImp().findCarTasksByStatus(status,carId);
+			JSONArray jo=JSONArray.fromObject( tasks );
+			out.print(jo);
+			return;
+		}
+		
+		//添加任务
+		if(method.equals("addTask")){
+			String taskString= request.getParameter("task");
+			JSONObject jsonObj = JSONObject.fromObject(taskString); 
+            Task task = (Task) JSONObject.toBean(jsonObj,Task.class);//强制转换为java对象
+            boolean flag = new TaskDaoImp().addTask(task);
+            out.print(flag);
+			return;
+		}
+		
+		//修改任务
+		if(method.equals("modifyTask")){
+			String taskString= request.getParameter("task");
+			JSONObject jsonObj = JSONObject.fromObject(taskString); 
+            Task task = (Task) JSONObject.toBean(jsonObj,Task.class);//强制转换为java对象
+            boolean flag = new TaskDaoImp().modifyTask(task);
+            out.print(flag);
+			return;
+		}
+		
+		//修改任务
+		if(method.equals("modifyTaskStatus")){
+			String taskId= request.getParameter("taskId");
+			String status= request.getParameter("status");
+            boolean flag = new TaskDaoImp().modifyTaskStatus(taskId,status);
+            out.print(flag);
 			return;
 		}
 		

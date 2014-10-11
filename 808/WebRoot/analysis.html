@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>analysis.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" type="text/css" href="css/analysis.css">
+    
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script> 
+    <script type="text/javascript" src="js/analysis.js"></script> 
+
+  </head>
+  
+  <body>
+    <div id="container">
+    	<div id="header">
+    		<div id="logo">哈尔滨市道路运输综合动态监管平台</div>
+    		<div class="caidan">
+    			<ul class="caidan_top head_font">
+    				<li><img src="images/analysis/yxfx.png" /><span>运行分析</span></li>
+    				<li><img src="images/analysis/zhjg.png" /><span>综合监管</span></li>
+    				<li id="logout"><img src="images/analysis/exit.png" /><span>&nbsp;&nbsp;&nbsp;退出&nbsp;&nbsp;&nbsp;</span></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div id="content">
+	    	<div id="content_left ">	    		
+	    		<div class="menu_left tab-wrap-div">
+	    			<ul class="menu_tab ui-tab tab-nav">
+	    				<li>总体态势
+	    				</li>
+	    				<li>实时监控
+	    				</li>
+	    				<li>客运分析
+	    				</li>
+	    				<li>货运分析
+	    				</li>
+	    				<li>危货分析
+	    				</li>
+	    			</ul>
+	    		</div>
+	    	</div>
+	    	<div id="main">
+	    		<div id="taishi" class="tab-cont" style="display:block;">
+		    		<div class="main_left">
+			    		<div class="box box_left">
+			    			<div class="box_head">
+			    				<div class="box_head_border">
+									<h3 class="box_head_title">行业总览</h3>
+									<span class="box_head_more currentDay" id="currentDay">截止 2014年10月6日</span>
+								</div>
+							</div>
+							<div class="box_container add_c"> 
+								<div class="box_content underline pandect_item" style="height: 38px; background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">经营业户</span>
+										<span class="value">86593</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="jingying">
+									<table class="liebiao">
+										<tr>
+											<td>货运业户</td>
+											<td>82161</td>
+											<td>客货业户</td>
+											<td>153</td>
+											<td>客运业户</td>
+											<td>39</td>
+										</tr>								
+										<tr>
+											<td>其他业户</td>
+											<td>4393</td>
+											<td>维修业户</td>
+											<td>4227</td>
+											<td>站（场）</td>
+											<td>3422</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item " style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">营运车辆</span>
+										<span class="value">97803</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="yingyun">
+									<table class="liebiao">
+										<tr>
+											<td>货运车辆</td>
+											<td>85927</td>
+											<td>驾培车辆</td>
+											<td>3240</td>
+											<td>客运车辆</td>
+											<td>1429</td>
+										</tr>																	
+										<tr>
+											<td>其它车辆</td>
+											<td>10447</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">从业人员</span>
+										<span class="value">113025</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="congye">
+									<table class="liebiao">
+										<tr>
+											<td>货运人员</td>
+											<td>64002</td>
+											<td>驾培人员</td>
+											<td>4470</td>
+											<td>客运人员</td>
+											<td>38033</td>
+										</tr>								
+										<tr>
+											<td>其他人员</td>
+											<td>11004</td>
+											<td>维修人员</td>
+											<td>18035</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">客运班线</span>
+										<span class="value">651</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="banxian">
+									<div>
+										<table class="liebiao">
+										<tr>
+											<td>省际班线</td>
+											<td>280</td>
+											<td>市际班线</td>
+											<td>299</td>
+											<td>县际班线</td>
+											<td>72</td>
+										</tr>
+										</table>
+									</div>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item add_item">
+										<span class="name">货运班线</span>
+										<span class="value">651</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="banxian">
+									<div>
+										<table class="liebiao">
+										<tr>
+											<td>省际班线</td>
+											<td>280</td>
+											<td>市际班线</td>
+											<td>299</td>
+											<td>县际班线</td>
+											<td>72</td>
+										</tr>
+										</table>
+									</div>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item add_item">
+										<span class="name">危货班线</span>
+										<span class="value">651</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="banxian">
+									<div>
+										<table class="liebiao">
+										<tr>
+											<td>省际班线</td>
+											<td>280</td>
+											<td>市际班线</td>
+											<td>299</td>
+											<td>县际班线</td>
+											<td>72</td>
+										</tr>
+										</table>
+									</div>
+								</div>
+							
+							</div>
+			    		</div>  
+			    	</div>
+			    	<div class="main_right">
+			    		<div class="box box_right">
+			    			<div class="box_head">
+			    				<div class="box_head_border">
+									<h3 class="box_head_title">发展趋势</h3>
+									<span class="box_head_more" >截止到本月近12个月环比变化情况</span>
+								</div>
+			    			</div>
+			    			<div class="box_container ">
+			    				<img src="images/analysis/jingying.png" width=99%/>
+			    			</div>
+			    		</div>
+			    		<div class="box box_right" style="margin-top: 10px">
+			    			<div class="box_head">
+			    				<div class="box_head_border">
+									<h3 class="box_head_title">区域分布</h3>
+									<span class="box_head_more">市各县区分布情况</span>
+								</div>
+			    			</div>
+			    			<div class="box_container" 
+    							style="height: 500px"
+			    			>
+			    				
+			    			</div>
+			    		</div>
+			    	</div>  		
+    			</div>
+    			<div id="jiance" class="tab-cont" style="display:none;">
+    				<div class="main_left">
+	    				<div class="box box_left">
+	    					<div class="box_head">
+	    						<div class="box_head_border">
+	    							<h3 class="box_head_title">实时监控</h3>
+									<span class="box_head_more liveclock" >2014年10月6日  14时14分30秒</span>								
+	    						</div>
+	    					</div>
+	    					<div class="box_container"> 
+	    						<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">行政许可</span>
+									</div>									
+								</div>								
+								<div class="box_content5 underline box_table" id="xuke"></div>
+								<div class="box_content2 box_table">
+									<table class="liebiao">
+										<tr>
+											<td>货运业户</td>
+											<td>82161</td>
+											<td>客货业户</td>
+											<td>153</td>
+											<td>客运业户</td>
+											<td>39</td>
+										</tr>								
+										<tr>
+											<td>其他业户</td>
+											<td>4393</td>
+											<td>维修业户</td>
+											<td>4227</td>
+											<td>站（场）</td>
+											<td>3422</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">行政执法</span>
+									</div>
+								</div>								
+								<div class="box_content5 underline " id="xzzhifa"></div>
+								<div class="box_content2 box_table">
+									<table class="liebiao">
+										<tr>
+											<td>货运业户</td>
+											<td>82161</td>
+											<td>客货业户</td>
+											<td>153</td>
+											<td>客运业户</td>
+											<td>39</td>
+										</tr>								
+										<tr>
+											<td>其他业户</td>
+											<td>4393</td>
+											<td>维修业户</td>
+											<td>4227</td>
+											<td>站（场）</td>
+											<td>3422</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">96520咨询</span>
+									</div>
+								</div>
+								<div class="box_content5 underline" id="zixun"></div>
+								<div class="box_content2 underline box_table" id="jingying">
+									<table class="liebiao">
+										<tr>
+											<td>货运业户</td>
+											<td>82161</td>
+											<td>客货业户</td>
+											<td>153</td>
+											<td>客运业户</td>
+											<td>39</td>
+										</tr>								
+										<tr>
+											<td>其他业户</td>
+											<td>4393</td>
+											<td>维修业户</td>
+											<td>4227</td>
+											<td>站（场）</td>
+											<td>3422</td>
+										</tr>
+									</table>
+								</div>
+	    					</div>
+	    				</div>
+	    			</div>
+	    			<div class="main_right">
+	    				<div class="box box_right">
+							<div class="box_head">
+								<div class="box_head_border">
+									<h3 class="box_head_title">"两客一危"联网联控</h3>
+									<span class="box_head_more liveclock" id="liveclock"> 2014年10月6日  14时14分30秒</span>
+								</div>
+							</div>
+							<div class="box_container">
+								<div class="box_content" id="ssjcMap" style="height: 500px;"></div> 
+							</div>
+						</div>
+	    			</div>
+    			</div>
+    			<div id="keyun" class="tab-cont" style="display:none;">	    				
+    					<div class="main_left">
+			    		<div class="box box_left">
+			    			<div class="box_head">
+			    				<div class="box_head_border">
+									<h3 class="box_head_title">客运总览</h3>
+									<span class="box_head_more currentDay" id="currentDay">截止 2014年10月6日</span>
+								</div>
+							</div>
+							<div class="box_container add_d"> 
+								<div class="box_content underline pandect_item" style="height: 38px; background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">经营业户</span>
+										<span class="value">86593</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="jingying">
+									<table class="liebiao">
+										<tr>
+											<td>货运业户</td>
+											<td>82161</td>
+											<td>客货业户</td>
+											<td>153</td>
+											<td>客运业户</td>
+											<td>39</td>
+										</tr>								
+										<tr>
+											<td>其他业户</td>
+											<td>4393</td>
+											<td>维修业户</td>
+											<td>4227</td>
+											<td>站（场）</td>
+											<td>3422</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item " style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">营运车辆</span>
+										<span class="value">97803</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="yingyun">
+									<table class="liebiao">
+										<tr>
+											<td>货运车辆</td>
+											<td>85927</td>
+											<td>驾培车辆</td>
+											<td>3240</td>
+											<td>客运车辆</td>
+											<td>1429</td>
+										</tr>																	
+										<tr>
+											<td>其它车辆</td>
+											<td>10447</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">从业人员</span>
+										<span class="value">113025</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="congye">
+									<table class="liebiao">
+										<tr>
+											<td>货运人员</td>
+											<td>64002</td>
+											<td>驾培人员</td>
+											<td>4470</td>
+											<td>客运人员</td>
+											<td>38033</td>
+										</tr>								
+										<tr>
+											<td>其他人员</td>
+											<td>11004</td>
+											<td>维修人员</td>
+											<td>18035</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">客运班线</span>
+										<span class="value">651</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="banxian">
+									<div>
+										<table class="liebiao">
+										<tr>
+											<td>省际班线</td>
+											<td>280</td>
+											<td>市际班线</td>
+											<td>299</td>
+											<td>县际班线</td>
+											<td>72</td>
+										</tr>
+										</table>
+									</div>
+								</div>
+							
+							</div>
+			    		</div>  
+			    	</div>
+	    			<div class="baoyouliang">
+	    				<div class="box box_right">
+    						<div class="box_head">
+    							<div class="box_head_border">
+    								<h3 class="box_head_title">道路客车运输从业企业车辆保有量&nbsp;&nbsp;TOP15</h3>
+    							</div>
+    						</div>
+	    					<div class="box_container">
+	    						<div class="box_contain2">
+	    							<table id="baoyouliang" class="data"  border="1" cellspacing="0"   bordercolor="#2DA1EE" style="width:902px">	    								
+	    								<thead>
+		    								<tr>
+		    									<th>序号</th>
+		    									<th>经营业户名称</th>
+		    									<th>联系方式</th>
+		    									<th>联系人</th>
+		    									<th>车辆保有量</th>
+		    								</tr>
+		    							</thead>
+		    							<tbody>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">1</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市炫辉食品有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">73</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">2</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市百鲜园调味品有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">61</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">3</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市诚途机电销售有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">51</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">4</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市中宇物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">50</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">5</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市近远达物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">48</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">6</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市盛捷建设有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">46</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">7</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市顺丰速运有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">46</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">8</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市宏嘉物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">42</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">9</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市义联物流股份有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">28</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">10</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市实华油品运输有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">26</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">11</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市长鹰化工有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">26</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">12</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市中翔汽车运输有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">26</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">13</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市易达运输有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">24</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">14</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市佰川物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">23</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">15</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市安利达物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">22</td>
+		    								</tr>
+		    							</tbody>
+	    							</table>
+	    						</div>
+	    					</div>
+	    				</div>	
+    				</div>
+    				<div class="leixinggc">
+    					<div class="box box_right">
+    						<div class="box_head" style="width=720px;">
+    							<div class="box_head_border">
+    								<h3 class="box_head_title">车辆类型构成</h3>
+    							</div>
+    						</div>
+	    					<div class="box_container img_data">
+	    						<img src="images/analysis/leixinggc.png" />
+	    					</div>
+	    				</div>
+	    				<div class="box box_right">
+    						<div class="box_head" >
+    							<div class="box_head_border">
+    								<h3 class="box_head_title">从业人员学历占比</h3>
+    							</div>
+    						</div>
+	    					<div class="box_container img_data">
+	    						<img src="images/analysis/xuelizc.png" />
+	    					</div>
+	    				</div>
+    				</div>
+    			</div>
+    			<div id="huoyun"  class="tab-cont" style="display:none;">    				
+    					<div class="main_left">
+			    		<div class="box box_left">
+			    			<div class="box_head">
+			    				<div class="box_head_border">
+									<h3 class="box_head_title">货运总览</h3>
+									<span class="box_head_more currentDay" id="currentDay">截止 2014年10月6日</span>
+								</div>
+							</div>
+							<div class="box_container add_d"> 
+								<div class="box_content underline pandect_item" style="height: 38px; background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">经营业户</span>
+										<span class="value">86593</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="jingying">
+									<table class="liebiao">
+										<tr>
+											<td>货运业户</td>
+											<td>82161</td>
+											<td>客货业户</td>
+											<td>153</td>
+											<td>客运业户</td>
+											<td>39</td>
+										</tr>								
+										<tr>
+											<td>其他业户</td>
+											<td>4393</td>
+											<td>维修业户</td>
+											<td>4227</td>
+											<td>站（场）</td>
+											<td>3422</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item " style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">营运车辆</span>
+										<span class="value">97803</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="yingyun">
+									<table class="liebiao">
+										<tr>
+											<td>货运车辆</td>
+											<td>85927</td>
+											<td>驾培车辆</td>
+											<td>3240</td>
+											<td>客运车辆</td>
+											<td>1429</td>
+										</tr>																	
+										<tr>
+											<td>其它车辆</td>
+											<td>10447</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">从业人员</span>
+										<span class="value">113025</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="congye">
+									<table class="liebiao">
+										<tr>
+											<td>货运人员</td>
+											<td>64002</td>
+											<td>驾培人员</td>
+											<td>4470</td>
+											<td>客运人员</td>
+											<td>38033</td>
+										</tr>								
+										<tr>
+											<td>其他人员</td>
+											<td>11004</td>
+											<td>维修人员</td>
+											<td>18035</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">货运班线</span>
+										<span class="value">651</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="banxian">
+									<div>
+										<table class="liebiao">
+										<tr>
+											<td>省际班线</td>
+											<td>280</td>
+											<td>市际班线</td>
+											<td>299</td>
+											<td>县际班线</td>
+											<td>72</td>
+										</tr>
+										</table>
+									</div>
+								</div>
+							
+							</div>
+			    		</div>  
+			    	</div>
+	    			<div class="baoyouliang">
+	    				<div class="box box_right">
+    						<div class="box_head">
+    							<div class="box_head_border">
+    								<h3 class="box_head_title">道路货运运输从业企业车辆保有量&nbsp;&nbsp;TOP15</h3>
+    							</div>
+    						</div>
+	    					<div class="box_container">
+	    						<div class="box_contain2">
+	    							<table id="baoyouliang" class="data"  border="1" cellspacing="0"   bordercolor="#2DA1EE" style="width:902px">	    								
+	    								<thead>
+		    								<tr>
+		    									<th>序号</th>
+		    									<th>经营业户名称</th>
+		    									<th>联系方式</th>
+		    									<th>联系人</th>
+		    									<th>车辆保有量</th>
+		    								</tr>
+		    							</thead>
+		    							<tbody>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">1</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市炫辉食品有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">73</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">2</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市百鲜园调味品有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">61</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">3</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市诚途机电销售有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">51</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">4</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市中宇物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">50</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">5</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市近远达物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">48</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">6</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市盛捷建设有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">46</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">7</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市顺丰速运有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">46</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">8</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市宏嘉物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">42</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">9</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市义联物流股份有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">28</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">10</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市实华油品运输有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">26</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">11</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市长鹰化工有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">26</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">12</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市中翔汽车运输有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">26</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">13</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市易达运输有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">24</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">14</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市佰川物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">23</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">15</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市安利达物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">22</td>
+		    								</tr>
+		    							</tbody>
+	    							</table>
+	    						</div>
+	    					</div>
+	    				</div>	
+    				</div>
+    				<div class="leixinggc">
+    					<div class="box box_right">
+    						<div class="box_head" style="width=720px;">
+    							<div class="box_head_border">
+    								<h3 class="box_head_title">车辆类型构成</h3>
+    							</div>
+    						</div>
+	    					<div class="box_container img_data">
+	    						<img src="images/analysis/leixinggc.png" />
+	    					</div>
+	    				</div>
+	    				<div class="box box_right">
+    						<div class="box_head" >
+    							<div class="box_head_border">
+    								<h3 class="box_head_title">从业人员学历占比</h3>
+    							</div>
+    						</div>
+	    					<div class="box_container img_data">
+	    						<img src="images/analysis/xuelizc.png" />
+	    					</div>
+	    				</div>
+    				</div>
+    			</div>
+    			<div id="weihuo" class="tab-cont" style="display:none;">
+    				<div class="main_left">
+			    		<div class="box box_left">
+			    			<div class="box_head">
+			    				<div class="box_head_border">
+									<h3 class="box_head_title">危货总览</h3>
+									<span class="box_head_more currentDay" id="currentDay">截止 2014年10月6日</span>
+								</div>
+							</div>
+							<div class="box_container add_d"> 
+								<div class="box_content underline pandect_item" style="height: 38px; background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">经营业户</span>
+										<span class="value">86593</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="jingying">
+									<table class="liebiao">
+										<tr>
+											<td>货运业户</td>
+											<td>82161</td>
+											<td>客货业户</td>
+											<td>153</td>
+											<td>客运业户</td>
+											<td>39</td>
+										</tr>								
+										<tr>
+											<td>其他业户</td>
+											<td>4393</td>
+											<td>维修业户</td>
+											<td>4227</td>
+											<td>站（场）</td>
+											<td>3422</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item " style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">营运车辆</span>
+										<span class="value">97803</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="yingyun">
+									<table class="liebiao">
+										<tr>
+											<td>货运车辆</td>
+											<td>85927</td>
+											<td>驾培车辆</td>
+											<td>3240</td>
+											<td>客运车辆</td>
+											<td>1429</td>
+										</tr>																	
+										<tr>
+											<td>其它车辆</td>
+											<td>10447</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">从业人员</span>
+										<span class="value">113025</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="congye">
+									<table class="liebiao">
+										<tr>
+											<td>货运人员</td>
+											<td>64002</td>
+											<td>驾培人员</td>
+											<td>4470</td>
+											<td>客运人员</td>
+											<td>38033</td>
+										</tr>								
+										<tr>
+											<td>其他人员</td>
+											<td>11004</td>
+											<td>维修人员</td>
+											<td>18035</td>
+										</tr>
+									</table>
+								</div>
+								<div class="box_content underline pandect_item" style="height: 38px;background: rgb(207, 232, 255);">
+									<div class="content_item">
+										<span class="name">危货班线</span>
+										<span class="value">651</span>
+									</div>
+								</div>
+								<div class="box_content2 underline box_table" id="banxian">
+									<div>
+										<table class="liebiao">
+										<tr>
+											<td>省际班线</td>
+											<td>280</td>
+											<td>市际班线</td>
+											<td>299</td>
+											<td>县际班线</td>
+											<td>72</td>
+										</tr>
+										</table>
+									</div>
+								</div>
+							
+							</div>
+			    		</div>  
+			    	</div>
+	    			<div class="baoyouliang">
+	    				<div class="box box_right">
+    						<div class="box_head">
+    							<div class="box_head_border">
+    								<h3 class="box_head_title">道路危货运输从业企业车辆保有量&nbsp;&nbsp;TOP15</h3>
+    							</div>
+    						</div>
+	    					<div class="box_container">
+	    						<div class="box_contain2">
+	    							<table id="baoyouliang" class="data"  border="1" cellspacing="0"   bordercolor="#2DA1EE" style="width:902px">	    								
+	    								<thead>
+		    								<tr>
+		    									<th>序号</th>
+		    									<th>经营业户名称</th>
+		    									<th>联系方式</th>
+		    									<th>联系人</th>
+		    									<th>车辆保有量</th>
+		    								</tr>
+		    							</thead>
+		    							<tbody>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">1</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市炫辉食品有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">73</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">2</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市百鲜园调味品有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">61</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">3</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市诚途机电销售有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">51</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">4</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市中宇物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">50</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">5</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市近远达物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">48</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">6</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市盛捷建设有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">46</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">7</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市顺丰速运有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">46</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">8</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市宏嘉物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">42</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">9</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市义联物流股份有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">28</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">10</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市实华油品运输有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">26</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">11</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市长鹰化工有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">26</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">12</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市中翔汽车运输有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">26</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">13</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市易达运输有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">24</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">14</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市佰川物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">23</td>
+		    								</tr>
+		    								<tr>
+		    									<td width="35px" style="text-align: center;">15</td>
+		    									<td width="281" style="padding-left: 40px;">哈尔滨市安利达物流有限公司</td>
+		    									<td width="134" style="text-align: center;">13823459078</td>
+		    									<td width="134" style="text-align: center;">陈先生</td>
+		    									<td width="134" style="text-align: center;">22</td>
+		    								</tr>
+		    							</tbody>
+	    							</table>
+	    						</div>
+	    					</div>
+	    				</div>	
+    				</div>
+    				<div class="leixinggc">
+    					<div class="box box_right">
+    						<div class="box_head" style="width=720px;">
+    							<div class="box_head_border">
+    								<h3 class="box_head_title">车辆类型构成</h3>
+    							</div>
+    						</div>
+	    					<div class="box_container img_data">
+	    						<img src="images/analysis/leixinggc.png" />
+	    					</div>
+	    				</div>
+	    				<div class="box box_right">
+    						<div class="box_head" >
+    							<div class="box_head_border">
+    								<h3 class="box_head_title">从业人员学历占比</h3>
+    							</div>
+    						</div>
+	    					<div class="box_container img_data">
+	    						<img src="images/analysis/xuelizc.png" />
+	    					</div>
+	    				</div>
+    				</div>
+    			</div>
+    	</div>
+    	</div>
+    	<div class="clear"></div>
+    	<div id="bottom">
+    		<div id="company">航天恒星科技有限公司</div>
+    	</div>
+    </div>
+  </body>
+</html>

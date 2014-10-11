@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>analysis.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" type="text/css" href="css/analysis.css">
+    <link rel="stylesheet" type="text/css" href="css/task.css">
+    
+    <script type="text/javascript" src="js/jquery-1.10.2.js"></script> 
+    <script type="text/javascript" src="js/analysis.js"></script> 
+ 	<script type="text/javascript" src="js/task.js"></script> 
+  </head>
+  
+  <body>
+    <div id="container">
+    	<div id="header">
+    		<div id="logo">哈尔滨市道路运输综合动态监管平台</div>
+    		<div class="caidan">
+    			<ul class="caidan_top head_font">
+    				<li><img src="images/analysis/yxfx.png" /><span>运行分析</span></li>
+    				<li><img src="images/analysis/zhjg.png" /><span>综合监管</span></li>
+    				<li id="logout"><img src="images/analysis/exit.png" /><span>&nbsp;&nbsp;&nbsp;退出&nbsp;&nbsp;&nbsp;</span></li>
+    			</ul>
+    		</div>
+    	</div>
+    	<div id="inner" >	    		
+    		<div class="inner_left">
+    			<div class="inner_content">
+    				<div class="inner_item" style="height:40px;">
+    					<span class="inner_name">任务列表</span>
+    				</div>
+    			</div>	
+    			<div class="inner_content">
+    				<div class="inner_item" style="height:40px;">
+    					<span class="inner_name">任务添加</span>
+    				</div>
+    			</div>	
+    		</div>
+    		
+    		 <div class="modify" >
+		    	    	<div class="right_container " >
+		    	    		<table class="right_condition addtask">
+		    	    			<tr>	    	    				
+		    	    				<td>任务编号:</td>
+		    	    				<td class="input">
+		    	    					<input type="text" id="order_num">
+		    	    				</td>
+		    	    				<td>任务状态:</td>
+		    	    				<td class="input">
+		    	    					<select id="order_state">
+		    	    						<option value="0">未完成</option>
+		    	    						<option value="1">进行中</option>
+		    	    						<option value="2">完成</option>
+		    	    					</select>
+		    	    				</td>
+		    	    				<td>行驶规则:</td>
+		    	    				<td class="input">
+		    	    					<select id="travel_rule">
+		    	    						<option value="timeleast">时间最少</option>
+		    	    						<option value="wayleast">路径最短</option>
+		    	    					</select>
+		    	    				</td>
+		    	    			</tr>
+		    	    			<tr>
+		    	    				<td>目的地:</td>
+		    	    				<td class="input">
+		    	    					<input type="text" id="longitude">
+		    	    				</td>
+		    	    				<td>下发时间:</td>
+		    	    				<td class="input">
+		    	    					<input type="text" id="time_begin">
+		    	    				</td>
+		    	    				<td>发送者:</td>
+		    	    				<td class="input">
+		    	    					<input type="text" id="order_send">
+		    	    				</td>		    	    				
+		    	    			</tr>
+		    	    			<tr>
+		    	    				<td>任务接收者:</td>
+		    	    				<td class="input">
+		    	    					<input type="text" id="order_rec">
+		    	    				</td>
+		    	    				<td>在此之前完成:</td>
+		    	    				<td class="input">
+		    	    					<input type="text" id="time_end">
+		    	    				</td>		    	    				
+		    	    				
+		    	    			</tr>
+		    	    			<tr>
+		    	    				<td>任务描述:</td>
+		    	    				<td class="input" colspan="4">
+		    	    					<input type="text" id="order_describe" style="width:400px; height:60px;">
+		    	    				</td>
+		    	    			</tr>
+		    	    		</table>
+		    	    	</div>
+		    	</div>
+		    	<div><input type="button" id="add" value="添加" style="margin-left: 490px;"></div>
+    	</div>   
+    </div>
+    	<div class="clear"></div>
+    	<div id="bottom">
+    		<div id="company">航天恒星科技有限公司</div>
+    	</div>
+  </body>
+</html>

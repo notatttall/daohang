@@ -22,7 +22,7 @@ public class Task implements Serializable{
 	private String taskId;
 	
 	/**
-	 *任务接收者 
+	 *任务接收者 (车辆编号)
 	 */
 	private String receiver;
 	
