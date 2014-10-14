@@ -83,23 +83,21 @@ function findTaskByStatus(status){
       			 }
      			 
      			 a = i + 1;
-     			 if( a > 10){
-     				 
-     			 }else{
-     				 str = str +
-     				 "<tr>"+
-     				 "<td>"+ a +"</td>"+
-     				 "<td>"+task.taskId+"</td>"+
-     				 "<td>"+status+"</td>"+
-     				 "<td>"+task.sendTime+"</td>"+
-     				 "<td>"+task.describe+"</td>"+
-     				 "<td height=28px>"+
-     				 "<input type='button' value='详情' >"+
-     				 "<input type='button' value='修改' >"+
-     				 "<input type='button' value='删除'>	"+
-     				 "</td>"+
-     				 "</tr>";
-     			 }
+     			
+ 				 str = str +
+ 				 "<tr>"+
+ 				 "<td>"+ a +"</td>"+
+ 				 "<td>"+task.taskId+"</td>"+
+ 				 "<td>"+status+"</td>"+
+ 				 "<td>"+task.sendTime+"</td>"+
+ 				 "<td>"+task.describe+"</td>"+
+ 				 "<td height=28px>"+
+ 				 "<input type='button' value='详情' >"+
+ 				 "<input type='button' value='修改' >"+
+ 				 "<input type='button' value='删除'>	"+
+ 				 "</td>"+
+ 				 "</tr>";
+     			 
      			 
      		 });
      		 /*for(var i=10; i>a; i--){

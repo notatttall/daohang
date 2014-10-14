@@ -18,7 +18,6 @@ $(function () {
 			
 		
 			$(".top-img").css("left",banner_width);
-			//$(".main-right").css("width",right_width);
 
 		}
 	
@@ -38,11 +37,11 @@ $(function() {
 	document.onkeydown = function(e) {
 		var ev = document.all ? window.event : e;
 		if (ev.keyCode == 13) {
-			window.location.href = "http://localhost:8083/808/analysis.html";
+			window.location.href = "http://localhost:8083/808/test.html";
 		}
 	}
 	$("#btnSubmit").click(function(){
-		window.location.href = "http://localhost:8083/808/analysis.html";
+		window.location.href = "http://localhost:8083/808/test.html";
 	}); 
 
 });

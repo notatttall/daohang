@@ -90,11 +90,14 @@ public class TaskDaoImp implements ITaskDao {
 		Connection conn = dao.getConn();
 		PreparedStatement statement = dao.getStatement();
 		
-		String sql =  "select * from task where status = ?";
+		String sql =  "select * from task ";
+
+		
+		//String sql =  "select * from task where status = ?";
 		ResultSet rs = null;
 		try {
 			statement = conn.prepareStatement(sql);
-			statement.setString(1, status);
+		//	statement.setString(1, status);
 			rs = statement.executeQuery();
 		} catch (SQLException e) {
 			e.printStackTrace();

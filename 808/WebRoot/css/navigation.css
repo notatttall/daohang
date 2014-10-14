@@ -42,14 +42,15 @@ li.menu
 li.button a
 {
     display: block;
-    font-family: BPreplay,Arial,Helvetica,sans-serif;
+    /* color: #456232; */
+    font-family: 微软雅黑;
     font-size: 21px;
     height: 34px;
     overflow: hidden;
     padding: 10px 0 0 5%;
     position: relative;
     width: 95%;
-    background:#78BD38;
+    background: #49D3CD;
 }
 
 li.button a:hover
@@ -70,7 +71,7 @@ li.button a span
 
 li.button a.blue
 {
-    color: #074384;
+    color: #6B6464;
 }
 li.button a.blue span
 {
@@ -114,7 +115,7 @@ li.button a:hover span
    
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid rgba(253, 252, 248, 0);
-    color: #6677BD;
+    color: #020202;
     margin: 5px 26px 5px 10px;
     padding: 4px 0 4px 18px;
 }
@@ -155,7 +156,7 @@ h2
 
 a, a:visited
 {
-    color: #0196e3;
+    color: #000000;
     text-decoration: none;
     outline: none;
 }
@@ -177,7 +178,7 @@ p
   font-size:17;
 }
 
-.active{background-color:#1EBE10!important}
+.active{background-color: #9EC7FA!important;}
 
 #Header
 {

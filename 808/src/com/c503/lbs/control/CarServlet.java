@@ -193,6 +193,23 @@ public class CarServlet extends HttpServlet {
 			return;
 		}
 		
+		//根据车辆编号和任务状态获取任务列表
+		if(method.equals("getCarUnfinishTaskByStatus")){
+			String status= request.getParameter("status");
+			String carId= request.getParameter("carId");
+			List<Task> tasks = new ArrayList<Task>();
+			if("4".equals(status)){
+				List<Task> tasks1 = new TaskDaoImp().findCarTasksByStatus("0",carId);
+				List<Task> tasks2 = new TaskDaoImp().findCarTasksByStatus("1",carId);
+				tasks.addAll(tasks1);
+				tasks.addAll(tasks2);
+			}
+			JSONArray jo=JSONArray.fromObject( tasks );
+			out.print(jo);
+			return;
+		}
+		
+		
 		//添加任务
 		if(method.equals("addTask")){
 			String taskString= request.getParameter("task");

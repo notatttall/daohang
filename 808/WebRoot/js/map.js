@@ -19,6 +19,12 @@ function mapInit(){
 	var point = new AMap.LngLat(126.538803,45.826); // 创建点坐标
 	mapObj.setCenter(point); // 设置地图中心点坐标
 	
+	//地图类型切换
+	mapObj.plugin(["AMap.MapType"], function() {
+		var type = new AMap.MapType({defaultType:0});//初始状态使用2D地图
+		mapObj.addControl(type);
+	});
+	
 	//在地图中添加ToolBar插件
 	mapObj.plugin(["AMap.ToolBar"],function(){		
 		toolBar = new AMap.ToolBar();

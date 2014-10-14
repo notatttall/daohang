@@ -14,7 +14,7 @@ $(document).ready(function () {
 		  icon: "images/car-1-1-4.png"                 
 	}); 
     
-    var interval = setInterval("findByCarId()",3000);
+   
 });
 
 //查找车辆详细信息
@@ -28,16 +28,18 @@ function findByCarId(){
     	dataType: 'json',   //返回值类型 
         success:function(car){ 
      		//实时更新表格
-     		var str =  "<td>"+car.id+"</td> <td>"+car.driverName+"</td><td>"+car.driverIDCard+
-     			"</td><td>"+car.speed+"</td><td>"+car.longitude+"</td> <td>"+car.latitude+"</td><td>"+car.elevation+
-     			"</td><td>"+car.oil+"</td><td>"+car.tirePressure+"</td> <td>"+car.pathID+"</td>";
+     		var str =  "<td>"+car.id+"</td> <td>"+car.driverName+"</td><td>正常"+
+     			"</td><td>60km/h</td><td>"+car.longitude+"</td> <td>"+car.latitude+"</td><td>80m"+
+     			"</td><td>"+car.oil+"</td><td>0.00pa</td> <td>0.01mg/L</td>";
      	    $("#tableHead").html(str);
      	   
      	    //XXX通过设置经纬度。。。
      	    /*if( marker1 != null){
      	    	marker1.setMap(null);
      	    }*/
-     		marker1.setPosition(new AMap.LngLat(car.longitude,car.latitude));
+     	    var point = new AMap.LngLat(car.longitude,car.latitude); // 创建点坐标
+     		marker1.setPosition(point);
+     		mapObj.setCenter(point); // 设置地图中心点坐标
      		
      		//clickEventListener=AMap.event.addListener(marker,'click',updateInfo(car));
      		//AMap.event.addListener(marker, "complete", updateInfo(car)); //查询成功时的回调函数

@@ -26,15 +26,15 @@ $(document).ready(function () {
     })
     
     var str = "<li class=\"li3\"><a href=\"#\">"+ "黑D22222" + "</a></li>";
- 
+	 var interval;
      $("#ul1").html(str);
      $('.li3').click(function(){
     		if($(this).hasClass('active')){
     			$(this).removeClass('active');	
+    			 clearTimeout(interval);
     		}else{
     			$(this).addClass('active');
-    			var point = new AMap.LngLat(126.538803,45.826); // 创建点坐标
-    			mapObj.setCenter(point); // 设置地图中心点坐标
+    			interval = setInterval("findByCarId()",1000);
     		}
  	});
      
@@ -50,12 +50,14 @@ $(document).ready(function () {
  		}
 	});
      
-     //任务管理
+    /* //任务管理
      $('#task').click(function(){
-    	 mapObj.destroy();
-    	 $(".task").css("display","block");
+    	 alert("test");
+    	 
+    	 $(".content-right").load("aa.html");
+    	 findTaskByStatus("0");
     	 //$(".modify").css("display","none");
-	});
+	});*/
    /*  $('.path').click(function(){
     	 
     	 $(this).addClass('active');

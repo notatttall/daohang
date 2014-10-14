@@ -26,8 +26,12 @@ public class CarLogin {
 		
 		RestCar car3 = new RestCar();
 		car3.setId("黑D22222");
-		car3.setLatitude("45.20349391402901");
-		car3.setLongitude("126.54235576275106");
+		car3.setLatitude("45.82785852300394");
+		car3.setLongitude("126.5448482066472");
+		car3.setDriverName("小明");
+		car3.setDriverIDCard("3623012931230909");
+		car3.setOil("30L");
+		car3.setTirePressure("1200pa");
 		login(car3);
 		
 		Task task = new Task();
